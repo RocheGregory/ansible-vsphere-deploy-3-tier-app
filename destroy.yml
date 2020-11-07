@@ -1,0 +1,12 @@
+---
+# -------------------------------------------------------------
+# File Name: destroy.yml
+# Power OFF and Remove three-tier-app VMs.
+#
+# Tue Nov 2 12:59:12 BST 2020 - juliusn - initial script
+# -------------------------------------------------------------
+
+- hosts: ThreeTierAppGroup
+  gather_facts: false
+  roles:
+    - destroy-vm

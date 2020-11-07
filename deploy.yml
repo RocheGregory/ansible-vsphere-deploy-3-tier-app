@@ -1,0 +1,13 @@
+---
+# -------------------------------------------------------------
+# File Name: deploy.yml
+# Deploy three-tier-app VMs from template.
+#
+# Tue Nov 2 12:59:12 BST 2020 - juliusn - initial script
+# -------------------------------------------------------------
+
+- hosts: ThreeTierAppGroup
+  gather_facts: false
+  roles:
+    - check-datastore-free-space
+    - deploy-vm
